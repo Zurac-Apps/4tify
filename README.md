@@ -42,12 +42,12 @@ This is by all means extremely limited right now. It's my goal to work on gettin
 We need to get our device onto a modified version of iOS 7.1.2 with lwvm patched out and replaced with GPT. Afterwards, we need to jailbreak it. Before you start, make sure you are jailbroken, have Core Utilities installed, and OpenSSH.
 
 1. First, build patched IPSW and grab blobs:	
-`./Create-Restore <Decimal-ECID> `
+`./Create-Restore.sh <Decimal-ECID> `
 2. Restore to IPSW (If the restore process doesn't start after e.g. fish: storing file 65536 (65536) just click your home button):		
-`./Restore <ip-address>`
+`./Restore.sh <ip-address>`
 3. Set up your device.
 4. We need to use SSH Ramdisk to Jailbreak, but as of right now the orginal tool doesn't wok on the latest versions of Mac OS. I managed to fix this by making my own version. (It might take a few tries to get this going, ipwndfu tends to error out.)*:
-`./Jailbreak`	
+`./Jailbreak.sh`	
 5. Done, you should see Cydia on your Springboard, open it, and let it do it's thing. Reopen, upgrade essential (you might have to open and close a few times).		
 
 **Note, if you're doing this process on a version of Mac OS where @msft_guy's SSH Ramdisk does work, just launch the jar, let it do it's thing, and run Jailbreak-Old.sh. Once it's done, exit recovery mode with your tool of choice.*
