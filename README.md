@@ -46,7 +46,7 @@ We need to get our device onto a modified version of iOS 7.1.2 with lwvm patched
 
 `./Create-Restore.sh <Decimal-ECID> `
 
-2. Restore to IPSW (If the restore process doesn't start after e.g. fish: storing file 65536 (65536) just click your home button):		
+2. Restore to IPSW (Enter root password, alpine, when asked. If the restore process doesn't start after e.g. fish: storing file 65536 (65536) just click your home button):		
 
 `./Restore.sh <ip-address>`
 
