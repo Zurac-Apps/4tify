@@ -42,7 +42,7 @@ This is by all means extremely limited right now. It's my goal to work on gettin
 ##  1. Restore and Jailbreak:
 We need to get our device onto a modified version of iOS 7.1.2 with lwvm patched out and replaced with GPT. Afterwards, we need to jailbreak it. Before you start, make sure you are jailbroken, have Core Utilities installed, and OpenSSH.
 
-1. First, build patched IPSW and grab blobs:
+1. First, build patched IPSW and grab blobs (of course, omit < > when entering):
 
 `./Create-Restore.sh <Decimal-ECID> `
 
