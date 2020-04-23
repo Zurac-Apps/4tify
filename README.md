@@ -60,7 +60,7 @@ Now, we'll partition our device, install iOS 4, and patch it. Once this is done,
 `./Partition.sh <ip-address>`
 2. Next, we'll boot into SSH Ramdisk and perform patch our new partition (It might take a few tries to get this going, ipwndfu tends to error out.):*	
 `./Patch-Partition.sh`
-3. Lastly, we'll initalize our partition, build our filesystem, restore it, and patch it. This step generally takes about an hour, so just sit back and relax:
+3. Lastly, we'll initalize our partition, build our filesystem, restore it, and patch it. This step generally takes about an hour, so just sit back and relax:	
 `./ios4.sh <ip-address>`
 4. That's it, your done, and your device will respring. To boot into iOS 4, lauch the 4tify app. Once your screen goes black wait a sec, then tap your homebutton, and should see your device start to verbose boot within 10-15 seconds.
 
