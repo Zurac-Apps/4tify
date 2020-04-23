@@ -80,6 +80,10 @@ Now, we'll partition our device, install iOS 4, and patch it. Once this is done,
 
 5. That's it, your done, and your device will respring. To boot into iOS 4, lauch the 4tify app. Once your screen goes black wait a sec, then tap your homebutton, and should see your device start to verbose boot within 10-15 seconds.
 
+6. If you delete the 4tify app, or it doesn't seem to be working, you can always run:
+
+`./Reinstall-App.sh <ip-address>`
+
 **Same note as above, if @msft_guy's SSH Ramdisk does work, just launch the jar, let it do it's thing, and run Patch-Partition-Old.sh*
 
 ## Thanks to:
