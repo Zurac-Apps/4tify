@@ -42,7 +42,7 @@ This is by all means extremely limited right now. It's my goal to work on gettin
 ##  1. Restore and Jailbreak:
 We need to get our device onto a modified version of iOS 7.1.2 with lwvm patched out and replaced with GPT. Afterwards, we need to jailbreak it. Before you start, make sure you are jailbroken, have Core Utilities installed, and OpenSSH.
 
-1. First, build patched IPSW and grab blobs:	
+1. First, build patched IPSW and grab blobs:			
 `./Create-Restore.sh <Decimal-ECID> `
 2. Restore to IPSW (If the restore process doesn't start after e.g. fish: storing file 65536 (65536) just click your home button):		
 `./Restore.sh <ip-address>`
@@ -56,7 +56,7 @@ We need to get our device onto a modified version of iOS 7.1.2 with lwvm patched
 ##  2. iOS 4 and the Second Partition:
 Now, we'll partition our device, install iOS 4, and patch it. Once this is done, you'll be good to go!
 
-1. First, we'll partition the device (It will ask for your root password twice to confirm, as always, enter alpine):	
+1. First, we'll partition the device (It will ask for your root password twice to confirm, as always, enter alpine):		
 `./Partition.sh <ip-address>`
 2. Next, we'll boot into SSH Ramdisk and perform patch our new partition (It might take a few tries to get this going, ipwndfu tends to error out.):*	
 `./Patch-Partition.sh`
