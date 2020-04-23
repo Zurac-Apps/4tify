@@ -1,0 +1,11 @@
+_HiStOrY_V2_
+/send
+/help
+/upload\040DeviceTree.n90ap.img3
+devicetree
+/deviceinfo
+/upload\040058-1056-002.dmg
+ramdisk
+/upload\040kernelcache.release.n90
+bootx
+/exit
