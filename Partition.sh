@@ -1,7 +1,6 @@
 #!/bin/bash
 set -e
 IP=$1
-rm ~/.ssh/known_hosts
 cd support_files/4.3/File_System
 /usr/bin/expect <(cat << EOF
 set timeout -1
