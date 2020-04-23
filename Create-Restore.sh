@@ -1,10 +1,5 @@
 #!/bin/bash
 set -e
-#  Script.sh
-#
-#
-#  Created by Zane Kleinberg on 4/18/20.
-#
 ECID=$1
 cd support_restore/
 echo "Fetching Blobs for:" $ECID

@@ -1,9 +1,4 @@
 #!/bin/bash
-#  Script.sh
-#
-#
-#  Created by Zane Kleinberg on 4/18/20.
-#
 set -e
 ps -fA | grep 2022 | grep -v grep | awk '{print $2}' | xargs kill
 cd support_files/4.3/File_System

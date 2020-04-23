@@ -1,10 +1,5 @@
 #!/bin/bash
 set -e
-#  Script.sh
-#
-#
-#  Created by Zane Kleinberg on 4/18/20.
-#
 cd support_files/7.1.2/Jailbreak
 echo "Establishing Jailbreak Environment (8s)..."
 sleep 8

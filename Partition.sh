@@ -1,9 +1,4 @@
 #!/bin/bash
-#  Script.sh
-#
-#
-#  Created by Zane Kleinberg on 4/18/20.
-#
 set -e
 IP=$1
 rm ~/.ssh/known_hosts

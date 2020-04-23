@@ -1,10 +1,5 @@
 #!/bin/bash
 set -e
-#  Script.sh
-#
-#
-#  Created by Zane Kleinberg on 4/18/20.
-#
 ps -fA | grep 2022 | grep -v grep | awk '{print $2}' | xargs kill
 cd support_files/7.1.2/Ramdisk
 ./ipwndfu -p

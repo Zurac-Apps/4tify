@@ -1,9 +1,4 @@
 #!/bin/bash
-#  Script.sh
-#
-#
-#  Created by Zane Kleinberg on 4/18/20.
-#
 set -e
 IP=$1
 cd support_files/4.3/File_System
@@ -98,9 +93,11 @@ send "fixkeybag -v2\r"
 expect "#"
 send "cp -a /tmp/systembag.kb /mnt2/keybags\r"
 expect "#"
-send "umount /mnt1 /mnt2\r"
+send "umount /mnt1\r"
 expect "#"
-expect "exit\r"
+send "umount /mnt2\r"
+expect "#"
+send "exit\r"
 expect eof
 )
 echo "Patching Boot Files (1/6)"
@@ -192,6 +189,17 @@ expect "#"
 send "chmod 6755 /usr/bin/runasroot\r"
 expect "#"
 send "chmod 6755  /boot.sh\r"
+expect "#"
+send "exit\r"
+expect eof
+)
+/usr/bin/expect <(cat << EOF
+set timeout -1
+spawn ssh -o StrictHostKeyChecking=no -p 22 mobile@$IP
+expect "mobile@$IP's password:"
+send "alpine\r"
+expect "#"
+send "uicache\r"
 expect "#"
 send "killall -9 SpringBoard\r"
 expect "#"

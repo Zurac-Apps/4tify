@@ -1,9 +1,4 @@
 #!/bin/bash
-#  Script.sh
-#
-#
-#  Created by Zane Kleinberg on 4/18/20.
-#
 set -e
 cd support_files/4.3/File_System
 srcdirs=$(find . -name '*TwistedMind2-*')
