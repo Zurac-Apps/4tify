@@ -21,7 +21,9 @@ This is by all means extremely limited right now. It's my goal to work on gettin
 * iPhone 4 (3,1)
 	* iOS 4.3.1 - 4.3.5
 * iPhone 4 (3,3)
-	* iOS 4.3 - 4.3.5	 
+	* iOS 4.2.5 - 4.2.8	 
+* iPod Touch 4g (4,1)
+	* iOS 4.3 - 4.3.5	
 * iPhone 3gs (2,1) 
 	* iOS 4.3 - 4.3.5
 * iPad 1 (1,1)
