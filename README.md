@@ -62,19 +62,23 @@ We need to get our device onto a modified version of iOS 7.1.2 with lwvm patched
 ##  2. iOS 4 and the Second Partition:
 Now, we'll partition our device, install iOS 4, and patch it. Once this is done, you'll be good to go!
 
-1. First, we'll partition the device (It will ask for your root password twice to confirm, as always, enter alpine):
+1. Fix Known_Host issues by running:
+
+`sudo rm ~/.ssh/known_hosts`
+
+2. First, we'll partition the device (It will ask for your root password twice to confirm, as always, enter alpine):
 
 `./Partition.sh <ip-address>`
 
-2. Next, we'll boot into SSH Ramdisk and perform patch our new partition (It might take a few tries to get this going, ipwndfu tends to error out.):*
+3. Next, we'll boot into SSH Ramdisk and perform patch our new partition (It might take a few tries to get this going, ipwndfu tends to error out.):*
 
 `./Patch-Partition.sh`
 
-3. Lastly, we'll initalize our partition, build our filesystem, restore it, and patch it. This step generally takes about an hour, so just sit back and relax:	
+4. Lastly, we'll initalize our partition, build our filesystem, restore it, and patch it. This step generally takes about an hour, so just sit back and relax:	
 
 `./ios4.sh <ip-address>`
 
-4. That's it, your done, and your device will respring. To boot into iOS 4, lauch the 4tify app. Once your screen goes black wait a sec, then tap your homebutton, and should see your device start to verbose boot within 10-15 seconds.
+5. That's it, your done, and your device will respring. To boot into iOS 4, lauch the 4tify app. Once your screen goes black wait a sec, then tap your homebutton, and should see your device start to verbose boot within 10-15 seconds.
 
 **Same note as above, if @msft_guy's SSH Ramdisk does work, just launch the jar, let it do it's thing, and run Patch-Partition-Old.sh*
 
