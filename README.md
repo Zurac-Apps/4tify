@@ -35,6 +35,7 @@ This is by all means extremely limited right now. It's my goal to work on gettin
 
 - Before starting, ensure your phone is Jailbroken with a tfp0 exploit, and OpenSSH + Core Utilities + Core Utilities (/bin) Installed.
 - While conducting the process, keep your phone plugged into your computer (obviously).
+- Keep your root password as alpine throughout the process. 
 - Lastly, don't be dismayed if you see errors with ipwndfu (USB Error 5, etc) when loading in to Ramdisk, just keep retrying, ipwndfu is really finicky.
 
 
