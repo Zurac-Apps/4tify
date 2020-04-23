@@ -56,7 +56,7 @@ We need to get our device onto a modified version of iOS 7.1.2 with lwvm patched
 ##  2. iOS 4 and the Second Partition:
 Now, we'll partition our device, install iOS 4, and patch it. Once this is done, you'll be good to go!
 
-1. First, we'll partition the device:	
+1. First, we'll partition the device (It will ask for your root password twice to confirm, as always, enter alpine):	
 `./Partition.sh <ip-address>`
 2. Next, we'll boot into SSH Ramdisk and perform patch our new partition (It might take a few tries to get this going, ipwndfu tends to error out.):*	
 `./Patch-Partition.sh`
