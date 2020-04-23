@@ -174,6 +174,7 @@ send "alpine\r"
 expect eof
 )
 echo "Moving Everything Into Place..."
+sleep 2
 /usr/bin/expect <(cat << EOF
 set timeout -1
 spawn ssh -o StrictHostKeyChecking=no -p 22 root@$IP
@@ -193,13 +194,24 @@ expect "#"
 send "exit\r"
 expect eof
 )
+sleep 2
 /usr/bin/expect <(cat << EOF
 set timeout -1
 spawn ssh -o StrictHostKeyChecking=no -p 22 mobile@$IP
 expect "mobile@$IP's password:"
 send "alpine\r"
-expect "#"
+expect "mobile"
 send "uicache\r"
+expect "mobile"
+send "exit\r"
+expect eof
+)
+sleep 2
+/usr/bin/expect <(cat << EOF
+set timeout -1
+spawn ssh -o StrictHostKeyChecking=no -p 22 root@$IP
+expect "root@$IP's password:"
+send "alpine\r"
 expect "#"
 send "killall -9 SpringBoard\r"
 expect "#"
