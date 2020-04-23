@@ -37,7 +37,7 @@ This is by all means extremely limited right now. It's my goal to work on gettin
 - While conducting the process, keep your phone plugged into your computer (obviously).
 - Keep your root password as alpine throughout the process. 
 - Lastly, don't be dismayed if you see errors with ipwndfu (USB Error 5, etc) when loading in to Ramdisk, just keep retrying, ipwndfu is really finicky.
-
+- As always, if one of the scripts refuses to run (permission denied) just run chmod +x on it.
 
 ##  1. Restore and Jailbreak:
 We need to get our device onto a modified version of iOS 7.1.2 with lwvm patched out and replaced with GPT. Afterwards, we need to jailbreak it. Before you start, make sure you are jailbroken, have Core Utilities installed, and OpenSSH.
@@ -51,7 +51,7 @@ We need to get our device onto a modified version of iOS 7.1.2 with lwvm patched
 `./Restore.sh <ip-address>`
 
 3. Set up your device.
-4. We need to use SSH Ramdisk to Jailbreak, but as of right now the orginal tool doesn't wok on the latest versions of Mac OS. I managed to fix this by making my own version. (It might take a few tries to get this going, ipwndfu tends to error out.)*:
+4. We need to use SSH Ramdisk to Jailbreak, but as of right now the orginal tool doesn't wok on the latest versions of Mac OS. I managed to fix this by making my own version. Get into DFU and run (It might take a few tries to get this going, ipwndfu tends to error out.)*:
 
 `./Jailbreak.sh`	
 
