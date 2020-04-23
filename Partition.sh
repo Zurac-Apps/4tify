@@ -25,7 +25,7 @@ srcdirs=$(ssh -n -p 22 root@$IP "find / -name '*TwistedMind2-*'")
 echo "$srcdirs"
 /usr/bin/expect <(cat << EOF
 set timeout -1
-spawn scp -P 22 root@$IP:$srcdirs $(pwd)
+spawn scp -P 22 -o StrictHostKeyChecking=no root@$IP:$srcdirs $(pwd)
 expect "root@$IP's password:"
 send "alpine\r"
 expect eof
