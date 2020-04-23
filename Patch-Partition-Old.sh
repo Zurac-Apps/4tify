@@ -16,7 +16,7 @@ sleep 2
 /usr/bin/expect <(cat << EOF
 #log_user 0
 set timeout -1
-spawn scp -P 2022 ${srcdirs:2} root@localhost:/
+spawn scp -P 2022 -o StrictHostKeyChecking=no ${srcdirs:2} root@localhost:/
 expect "root@localhost's password:"
 send "alpine\r"
 expect eof
@@ -26,7 +26,7 @@ sleep 2
 /usr/bin/expect <(cat << EOF
 #log_user 0
 set timeout -1
-spawn scp -P 2022 dd root@localhost:/bin
+spawn scp -P 2022 -o StrictHostKeyChecking=no dd root@localhost:/bin
 expect "root@localhost's password:"
 send "alpine\r"
 expect eof

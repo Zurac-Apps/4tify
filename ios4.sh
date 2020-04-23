@@ -33,7 +33,7 @@ echo "Preparing Filesystems..."
 echo "Sending Filesystem, This Will Take Long Time..."
 /usr/bin/expect <(cat << EOF
 set timeout -1
-spawn scp -P 22 UDZO.dmg root@$IP:/mnt2
+spawn scp -P 22 -o StrictHostKeyChecking=no UDZO.dmg root@$IP:/mnt2
 expect "root@$IP's password:"
 send "alpine\r"
 expect eof
@@ -80,7 +80,7 @@ cd ../Patches
 echo "Patching Fstab..."
 /usr/bin/expect <(cat << EOF
 set timeout -1
-spawn scp -P 22 fstab root@$IP:/mnt1/etc
+spawn scp -P 22 -o StrictHostKeyChecking=no fstab root@$IP:/mnt1/etc
 expect "root@$IP's password:"
 send "alpine\r"
 expect eof
@@ -106,7 +106,7 @@ expect eof
 echo "Patching Boot Files (1/6)"
 /usr/bin/expect <(cat << EOF
 set timeout -1
-spawn scp -P 22 applelogo root@$IP:/
+spawn scp -P 22 -o StrictHostKeyChecking=no applelogo root@$IP:/
 expect "root@$IP's password:"
 send "alpine\r"
 expect eof
@@ -114,7 +114,7 @@ expect eof
 echo "Patching Boot Files (2/6)"
 /usr/bin/expect <(cat << EOF
 set timeout -1
-spawn scp -P 22 devicetree root@$IP:/
+spawn scp -P 22 -o StrictHostKeyChecking=no devicetree root@$IP:/
 expect "root@$IP's password:"
 send "alpine\r"
 expect eof
@@ -122,7 +122,7 @@ expect eof
 echo "Patching Boot Files (3/6)"
 /usr/bin/expect <(cat << EOF
 set timeout -1
-spawn scp -P 22 kernelcache root@$IP:/
+spawn scp -P 22 -o StrictHostKeyChecking=no kernelcache root@$IP:/
 expect "root@$IP's password:"
 send "alpine\r"
 expect eof
@@ -130,7 +130,7 @@ expect eof
 echo "Patching Boot Files (4/6)"
 /usr/bin/expect <(cat << EOF
 set timeout -1
-spawn scp -P 22 ramdisk root@$IP:/
+spawn scp -P 22 -o StrictHostKeyChecking=no ramdisk root@$IP:/
 expect "root@$IP's password:"
 send "alpine\r"
 expect eof
@@ -138,7 +138,7 @@ expect eof
 echo "Patching Boot Files (5/6)"
 /usr/bin/expect <(cat << EOF
 set timeout -1
-spawn scp -P 22 iBEC.img3 root@$IP:/
+spawn scp -P 22 -o StrictHostKeyChecking=no iBEC.img3 root@$IP:/
 expect "root@$IP's password:"
 send "alpine\r"
 expect eof
@@ -146,7 +146,7 @@ expect eof
 echo "Patching Boot Files (6/6)"
 /usr/bin/expect <(cat << EOF
 set timeout -1
-spawn scp -P 22 iBSS.patched root@$IP:/
+spawn scp -P 22 -o StrictHostKeyChecking=no iBSS.patched root@$IP:/
 expect "root@$IP's password:"
 send "alpine\r"
 expect eof
@@ -154,7 +154,7 @@ expect eof
 echo "Sending runasroot "
 /usr/bin/expect <(cat << EOF
 set timeout -1
-spawn scp -P 22 runasroot root@$IP:/usr/bin
+spawn scp -P 22 -o StrictHostKeyChecking=no runasroot root@$IP:/usr/bin
 expect "root@$IP's password:"
 send "alpine\r"
 expect eof
@@ -162,7 +162,7 @@ expect eof
 echo "Sending Boot..."
 /usr/bin/expect <(cat << EOF
 set timeout -1
-spawn scp -P 22 boot.sh root@$IP:/
+spawn scp -P 22 -o StrictHostKeyChecking=no boot.sh root@$IP:/
 expect "root@$IP's password:"
 send "alpine\r"
 expect eof
@@ -171,7 +171,7 @@ cd ../App
 echo "Sending App..."
 /usr/bin/expect <(cat << EOF
 set timeout -1
-spawn scp -P 22 -r 4tify.app root@$IP:/Applications
+spawn scp -P 22 -o StrictHostKeyChecking=no -r 4tify.app root@$IP:/Applications
 expect "root@$IP's password:"
 send "alpine\r"
 expect eof
