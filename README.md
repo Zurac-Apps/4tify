@@ -47,7 +47,7 @@ We need to get our device onto a modified version of iOS 7.1.2 with lwvm patched
 2. Restore to IPSW (If the restore process doesn't start after e.g. fish: storing file 65536 (65536) just click your home button):		
 `./Restore.sh <ip-address>`
 3. Set up your device.
-4. We need to use SSH Ramdisk to Jailbreak, but as of right now the orginal tool doesn't wok on the latest versions of Mac OS. I managed to fix this by making my own version. (It might take a few tries to get this going, ipwndfu tends to error out.)*:
+4. We need to use SSH Ramdisk to Jailbreak, but as of right now the orginal tool doesn't wok on the latest versions of Mac OS. I managed to fix this by making my own version. (It might take a few tries to get this going, ipwndfu tends to error out.)*:		
 `./Jailbreak.sh`	
 5. Done, you should see Cydia on your Springboard, open it, and let it do it's thing. Reopen, click upgrade essential (you might have to open and close a few times).		
 
