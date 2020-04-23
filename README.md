@@ -49,7 +49,7 @@ We need to get our device onto a modified version of iOS 7.1.2 with lwvm patched
 3. Set up your device.
 4. We need to use SSH Ramdisk to Jailbreak, but as of right now the orginal tool doesn't wok on the latest versions of Mac OS. I managed to fix this by making my own version. (It might take a few tries to get this going, ipwndfu tends to error out.)*:
 `./Jailbreak.sh`	
-5. Done, you should see Cydia on your Springboard, open it, and let it do it's thing. Reopen, upgrade essential (you might have to open and close a few times).		
+5. Done, you should see Cydia on your Springboard, open it, and let it do it's thing. Reopen, click upgrade essential (you might have to open and close a few times).		
 
 **Note, if you're doing this process on a version of Mac OS where @msft_guy's SSH Ramdisk does work, just launch the jar, let it do it's thing, and run Jailbreak-Old.sh. Once it's done, exit recovery mode with your tool of choice.*
 
