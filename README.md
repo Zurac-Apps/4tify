@@ -21,7 +21,9 @@ This is by all means extremely limited right now. It's my goal to work on gettin
 * iPhone 4 (3,1)
 	* iOS 4.3.1 - 4.3.5
 * iPhone 4 (3,3)
-	* iOS 4.3 - 4.3.5	 
+	* iOS 4.2.5 - 4.2.8	 
+* iPod Touch 4g (4,1)
+	* iOS 4.3 - 4.3.5	
 * iPhone 3gs (2,1) 
 	* iOS 4.3 - 4.3.5
 * iPad 1 (1,1)
@@ -79,6 +81,10 @@ Now, we'll partition our device, install iOS 4, and patch it. Once this is done,
 `./ios4.sh <ip-address>`
 
 5. That's it, your done, and your device will respring. To boot into iOS 4, lauch the 4tify app. Once your screen goes black wait a sec, then tap your homebutton, and should see your device start to verbose boot within 10-15 seconds.
+
+6. If you delete the 4tify app, or it doesn't seem to be working, you can always run:
+
+`./Reinstall-App.sh <ip-address>`
 
 **Same note as above, if @msft_guy's SSH Ramdisk does work, just launch the jar, let it do it's thing, and run Patch-Partition-Old.sh*
 
