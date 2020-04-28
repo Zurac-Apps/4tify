@@ -40,7 +40,6 @@ This is by all means extremely limited right now. It's my goal to work on gettin
 - Keep your root password as alpine throughout the process. 
 - Lastly, don't be dismayed if you see errors with ipwndfu (USB Error 5, etc) when loading in to Ramdisk, just keep retrying, ipwndfu is really finicky.
 - As always, if one of the scripts refuses to run (permission denied) just run chmod +x on it.
-- Thought it was clear, but keep folder path without spaces. Don't run from /Users/z/desktop/Jailbreak Files/Stuff and stuff/4tify instead run from /Users/z/Desktop/Jailbreak_Files/Stuff_and_stuff/4tify
 
 ##  1. Restore and Jailbreak:
 We need to get our device onto a modified version of iOS 7.1.2 with lwvm patched out and replaced with GPT. Afterwards, we need to jailbreak it. Before you start, make sure you are jailbroken, have Core Utilities installed, and OpenSSH.
